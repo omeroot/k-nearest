@@ -17,8 +17,8 @@ def classify0(inX, dataSet, labels, k):
 		y = dot[1]
 		totalDistance[index] = (calculateDist(x, y, inX[0],inX[1]))
 		label[totalDistance[index]] = labels[index]
-		print label
-	totalDistance = sorted(totalDistance,reverse = True)[ : k]
+		
+	totalDistance = sorted(totalDistance)[ : k]
 	
 	for dist in totalDistance:
 		if label[dist] not in labelVote:
